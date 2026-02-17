@@ -1,0 +1,76 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: modalIn 160ms ease-out;
+}
+
+@keyframes modalIn {
+  from {
+    transform: translateY(6px) scale(0.98);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(99, 102, 241, 0.07);
+}
+
+.modal-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+}
+
+.modal-close:hover {
+  background: rgba(99, 102, 241, 0.10);
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+
+

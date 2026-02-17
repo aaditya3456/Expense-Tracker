@@ -1,0 +1,140 @@
+.expense-list-container {
+  overflow-x: auto;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.expense-table thead {
+  background: rgba(99, 102, 241, 0.08);
+  border-bottom: 1px solid var(--border);
+}
+
+.expense-table th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expense-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.expense-table tbody tr:hover {
+  background-color: rgba(99, 102, 241, 0.06);
+}
+
+.expense-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.date-cell {
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.category-cell {
+  white-space: nowrap;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--text-primary);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.description-cell {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.amount-column,
+.amount-cell {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.actions-column {
+  text-align: right;
+  width: 130px;
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 0.25rem;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.edit-button {
+  background: rgba(99, 102, 241, 0.95);
+  color: #ffffff;
+}
+
+.delete-button {
+  background: rgba(239, 68, 68, 0.95);
+  color: #ffffff;
+}
+
+.table-button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.empty-state p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.empty-state-hint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .expense-table {
+    font-size: 0.85rem;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    padding: 0.5rem;
+  }
+
+  .description-cell {
+    max-width: 150px;
+  }
+}
+

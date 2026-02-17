@@ -1,0 +1,65 @@
+.expense-summary {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px);
+}
+
+.expense-summary h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(99, 102, 241, 0.06);
+  border-radius: 14px;
+  border: 1px solid rgba(99, 102, 241, 0.14);
+}
+
+.summary-category {
+  font-weight: 500;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.summary-amount {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
+.summary-percentage {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-width: 50px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .summary-item {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .summary-percentage {
+    width: 100%;
+    text-align: left;
+    margin-left: 0.5rem;
+  }
+}
+
